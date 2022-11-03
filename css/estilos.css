@@ -1,0 +1,67 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.color {
+  background-color: #ff7b00;
+  padding: 0;
+  margin: 0; }
+
+.videoyoutube {
+  display: flex;
+  justify-content: center; }
+
+h1 {
+  color: blue;
+  text-decoration: underline;
+  display: flex;
+  text-align: center;
+  justify-content: center; }
+
+h2 {
+  color: black;
+  text-decoration: underline;
+  display: flex;
+  text-align: center;
+  justify-content: center; }
+
+/*aqui utulizamos extend*/
+.reutiliza1, .reutiliza2, .mixins1, .mixins2 {
+  border: 1px solid rgba(13, 112, 68, 0.592);
+  background-color: orangered;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif; }
+
+.reutiliza2, .mixins1, .mixins2 {
+  background-color: orange;
+  font-size: 25px; }
+
+.mixins1 {
+  background-color: rgba(229, 162, 37, 0.502);
+  font-size: 35px; }
+
+.mixins2 {
+  background-color: rgba(229, 162, 37, 0.502);
+  font-size: 35px;
+  font-size: 50px; }
+
+/*anidacion*/
+.imagescontainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 50% 25%;
+  list-style: none; }
+  .imagescontainer li {
+    margin: 2%; }
+    .imagescontainer li img {
+      width: 100%;
+      height: 100%;
+      padding: 5%; }
+
+.form-container {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  width: 100%; }
