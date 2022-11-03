@@ -1,0 +1,121 @@
+@import "_variables.scss";
+
+body{
+  padding: $espaciado;
+  margin: $margin;
+  box-sizing: border-box;
+  background-color:orangered;
+}
+.color{
+  background-color: $color_fondo;
+  padding: $espaciado;
+  margin: $margin;
+}
+
+.videoyoutube{
+  display: flex;
+  justify-content: center;
+
+}
+
+h1{
+  color:$colorfuentetitulo1;
+  text-decoration:$texto_subrayado;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+h2{
+  color:$colorfuentetitulo2;
+  text-decoration: $texto_subrayado;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/*aqui utulizamos extend*/
+.reutiliza1{
+  border: 1px solid rgba(13, 112, 68, 0.592);
+  background-color: orangered;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;;
+}
+
+.reutiliza2{
+  @extend .reutiliza1;
+  background-color: orange;
+  font-size: 25px;
+}
+
+@mixin mixins1{
+  @extend .reutiliza2;
+  background-color: rgba(229, 162, 37, 0.502);
+  font-size: 35px;
+}
+
+@mixin mixins2{
+  @extend .reutiliza2;
+  @include mixins1;
+  font-size: 55px;
+}
+
+.mixins1{
+  @include mixins1;
+}
+.mixins2{
+  @include mixins1;
+  font-size: 50px;
+}  
+
+/*anidacion*/
+
+.imagescontainer{
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 50% 25%;
+  list-style:none;
+    li{
+     margin:2%;
+     img{
+      width: 100%;
+      height: 100%;
+      padding: 5%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-container{
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
